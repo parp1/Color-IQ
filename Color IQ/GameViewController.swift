@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    //setting outlets, constants and variables
     @IBOutlet weak var gameMode: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     var colorButtonLeft = true
@@ -17,7 +18,6 @@ class GameViewController: UIViewController {
     var game = ""
     var score = 0
     var timeLeft = 60
-    
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -52,10 +52,11 @@ class GameViewController: UIViewController {
     
     func changeScore(gameMode: String)
     {
+        //if the current game is the same as the game mode expressed by the button that is pressed, the score is increased by 1; this is also true if the text and font color are the same - a "double case"
         if (game == gameMode || doubleCase)
         {
             print("right")
-            score++
+            score += 1
         }
         else
         {
@@ -72,17 +73,24 @@ class GameViewController: UIViewController {
         let timer1 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "countdown", userInfo: nil, repeats: true)
     }
     
+    //changes on a set interval, also changing the timer label
     func countdown()
     {
-        timeLeft--
+        timeLeft -= 1
         timeLabel.text = "\(timeLeft)"
     }
     
     func update()
     {
+        
+        //randoms for word text and font color
         let random1 = Int(arc4random_uniform(5))
         let random2 = Int(arc4random_uniform(5))
+        
+        //random for what side of the screen the color button is on
         let random3 = Int(arc4random_uniform(2))
+        
+        //random for current game mode - either text or color
         let random4 = Int(arc4random_uniform(2))
         
         if (random1 == random2)
@@ -123,18 +131,22 @@ class GameViewController: UIViewController {
         
         if (colorButtonLeft)
         {
-            button1.setTitle(text1, forState: UIControlState.Normal)
-            button1.setTitleColor(rgb2, forState: UIControlState.Normal)
-            button2.setTitle(text2, forState: UIControlState.Normal)
-            button2.setTitleColor(rgb1, forState: UIControlState.Normal)
+//            button1.setTitle(text1, forState: UIControlState.Normal)
+//            button1.setTitleColor(rgb2, forState: UIControlState.Normal)
+            button1.setImage(UIImage(named: ("\(text1)button.png")), forState: UIControlState.Normal)
+//            button2.setTitle(text2, forState: UIControlState.Normal)
+//            button2.setTitleColor(rgb1, forState: UIControlState.Normal)
+            button2.setImage(UIImage(named: ("\(text2)button.png")), forState: UIControlState.Normal)
             colorButtonLeft = false
         }
         else
         {
-            button1.setTitle(text2, forState: UIControlState.Normal)
-            button1.setTitleColor(rgb1, forState: UIControlState.Normal)
-            button2.setTitle(text1, forState: UIControlState.Normal)
-            button2.setTitleColor(rgb2, forState: UIControlState.Normal)
+//            button1.setTitle(text2, forState: UIControlState.Normal)
+//            button1.setTitleColor(rgb1, forState: UIControlState.Normal)
+            button1.setImage(UIImage(named: ("\(text2)button.png")), forState: UIControlState.Normal)
+//            button2.setTitle(text1, forState: UIControlState.Normal)
+//            button2.setTitleColor(rgb2, forState: UIControlState.Normal)
+            button2.setImage(UIImage(named: ("\(text1)button.png")), forState: UIControlState.Normal)
             colorButtonLeft = true
         }
     }
