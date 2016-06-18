@@ -71,6 +71,10 @@ class GameViewController: UIViewController {
         let timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "update", userInfo: nil, repeats: true)
         
         let timer1 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "countdown", userInfo: nil, repeats: true)
+        
+        
+        //button2.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
+        //button2.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
     }
     
     //changes on a set interval, also changing the timer label
@@ -133,20 +137,21 @@ class GameViewController: UIViewController {
         {
 //            button1.setTitle(text1, forState: UIControlState.Normal)
 //            button1.setTitleColor(rgb2, forState: UIControlState.Normal)
-            button1.setImage(UIImage(named: ("\(text1)button.png")), forState: UIControlState.Normal)
+            button1.setBackgroundImage(UIImage(named: ("\(text1)button.png")), forState: UIControlState.Normal)
 //            button2.setTitle(text2, forState: UIControlState.Normal)
 //            button2.setTitleColor(rgb1, forState: UIControlState.Normal)
-            button2.setImage(UIImage(named: ("\(text2)button.png")), forState: UIControlState.Normal)
+            button2.setBackgroundImage(UIImage(named: ("\(text2)button.png")), forState: UIControlState.Normal)
             colorButtonLeft = false
         }
         else
         {
 //            button1.setTitle(text2, forState: UIControlState.Normal)
 //            button1.setTitleColor(rgb1, forState: UIControlState.Normal)
-            button1.setImage(UIImage(named: ("\(text2)button.png")), forState: UIControlState.Normal)
+            button1.setBackgroundImage(UIImage(named: ("\(text2)button.png")), forState: UIControlState.Normal)
 //            button2.setTitle(text1, forState: UIControlState.Normal)
 //            button2.setTitleColor(rgb2, forState: UIControlState.Normal)
-            button2.setImage(UIImage(named: ("\(text1)button.png")), forState: UIControlState.Normal)
+            
+            button2.setBackgroundImage(UIImage(named: ("\(text1)button.png")), forState: UIControlState.Normal)
             colorButtonLeft = true
         }
     }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -55,13 +56,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw5-1f-Gtz">
-                                <rect key="frame" x="218" y="464" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw5-1f-Gtz">
+                                <rect key="frame" x="251" y="563" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="IfD-1v-b9W"/>
                                     <constraint firstAttribute="height" constant="64" id="ieh-8A-BD6"/>
                                 </constraints>
-                                <state key="normal" title="Button 2" image="colorlessbutton"/>
+                                <state key="normal" title="Button 2"/>
                                 <connections>
                                     <action selector="button2Pressed:" destination="kI6-fd-Azp" eventType="touchUpInside" id="owJ-Yj-25d"/>
                                 </connections>
@@ -78,13 +79,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8n-47-zKz">
-                                <rect key="frame" x="88" y="464" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8n-47-zKz">
+                                <rect key="frame" x="60" y="563" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="6wD-KV-w9K"/>
                                     <constraint firstAttribute="width" constant="64" id="Ywp-GA-VMD"/>
                                 </constraints>
-                                <state key="normal" title="Button 1" image="colorlessbutton"/>
+                                <state key="normal" title="Button 1"/>
                                 <connections>
                                     <action selector="button1Pressed:" destination="kI6-fd-Azp" eventType="touchUpInside" id="wqZ-Bz-jx4"/>
                                 </connections>
@@ -92,8 +93,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="60b-hJ-mQa" firstAttribute="top" secondItem="W8n-47-zKz" secondAttribute="bottom" constant="40" id="9bi-Uz-ltX"/>
                             <constraint firstItem="5Sp-pU-sqK" firstAttribute="centerX" secondItem="kQz-BM-DaE" secondAttribute="centerX" id="aNq-L4-b9l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qw5-1f-Gtz" secondAttribute="trailing" constant="40" id="d8F-zX-Vog"/>
                             <constraint firstItem="oXJ-u9-2Gd" firstAttribute="centerX" secondItem="kQz-BM-DaE" secondAttribute="centerX" id="gCT-Vh-fbA"/>
+                            <constraint firstItem="W8n-47-zKz" firstAttribute="leading" secondItem="kQz-BM-DaE" secondAttribute="leadingMargin" constant="40" id="mO8-b4-O9f"/>
+                            <constraint firstItem="60b-hJ-mQa" firstAttribute="top" secondItem="Qw5-1f-Gtz" secondAttribute="bottom" constant="40" id="s6Z-ee-a9A"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -110,7 +115,4 @@
             <point key="canvasLocation" x="778.5" y="317.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="colorlessbutton" width="64" height="64"/>
-    </resources>
 </document>
