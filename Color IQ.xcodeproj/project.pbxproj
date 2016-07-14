@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198E2E96B3D79A05FB0E096C /* Pods_Color_IQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */; };
+		27A686EC1D36EB6B009FC69C /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A686EB1D36EB6B009FC69C /* KDCircularProgress.swift */; };
 		27B575F71C683F950063E77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B575F61C683F950063E77B /* AppDelegate.swift */; };
 		27B575F91C683F950063E77B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B575F81C683F950063E77B /* ViewController.swift */; };
 		27B575FC1C683F950063E77B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B575FA1C683F950063E77B /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.debug.xcconfig"; sourceTree = "<group>"; };
+		27A686EB1D36EB6B009FC69C /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		27B575F31C683F950063E77B /* Color IQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color IQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B575F61C683F950063E77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B575F81C683F950063E77B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		27B576161C683F950063E77B /* Color_IQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_IQUITests.swift; sourceTree = "<group>"; };
 		27B576181C683F950063E77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B576241C6840080063E77B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.release.xcconfig"; sourceTree = "<group>"; };
+		E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_IQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198E2E96B3D79A05FB0E096C /* Pods_Color_IQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,8 @@
 				27B5760A1C683F950063E77B /* Color IQTests */,
 				27B576151C683F950063E77B /* Color IQUITests */,
 				27B575F41C683F950063E77B /* Products */,
+				8ADBCA4D8F91400F18DDE722 /* Pods */,
+				2FEAFFDF768F3ABAF20C17C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +110,7 @@
 			children = (
 				27B575F61C683F950063E77B /* AppDelegate.swift */,
 				27B575F81C683F950063E77B /* ViewController.swift */,
+				27A686EB1D36EB6B009FC69C /* KDCircularProgress.swift */,
 				27B575FA1C683F950063E77B /* Main.storyboard */,
 				27B576241C6840080063E77B /* GameViewController.swift */,
 				27B575FD1C683F950063E77B /* Assets.xcassets */,
@@ -128,6 +138,23 @@
 			path = "Color IQUITests";
 			sourceTree = "<group>";
 		};
+		2FEAFFDF768F3ABAF20C17C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8ADBCA4D8F91400F18DDE722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */,
+				70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B5761B1C683F950063E77B /* Build configuration list for PBXNativeTarget "Color IQ" */;
 			buildPhases = (
+				5A8753099928137DD95A5389 /* Check Pods Manifest.lock */,
 				27B575EF1C683F950063E77B /* Sources */,
 				27B575F01C683F950063E77B /* Frameworks */,
 				27B575F11C683F950063E77B /* Resources */,
+				B06A65BB22DA904C8D862481 /* Embed Pods Frameworks */,
+				CA1F97258A0FDD0492DC09DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +226,7 @@
 				TargetAttributes = {
 					27B575F21C683F950063E77B = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = U9M98M4D45;
 					};
 					27B576061C683F950063E77B = {
 						CreatedOnToolsVersion = 7.2;
@@ -254,11 +285,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A8753099928137DD95A5389 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B06A65BB22DA904C8D862481 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA1F97258A0FDD0492DC09DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27B575EF1C683F950063E77B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A686EC1D36EB6B009FC69C /* KDCircularProgress.swift in Sources */,
 				27B575F91C683F950063E77B /* ViewController.swift in Sources */,
 				27B576251C6840080063E77B /* GameViewController.swift in Sources */,
 				27B575F71C683F950063E77B /* AppDelegate.swift in Sources */,
@@ -399,23 +479,31 @@
 		};
 		27B5761C1C683F950063E77B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Color IQ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appgurus.Color-IQ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		27B5761D1C683F950063E77B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Color IQ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appgurus.Color-IQ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -486,6 +574,7 @@
 				27B5761D1C683F950063E77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27B5761E1C683F950063E77B /* Build configuration list for PBXNativeTarget "Color IQTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +583,7 @@
 				27B576201C683F950063E77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27B576211C683F950063E77B /* Build configuration list for PBXNativeTarget "Color IQUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +592,7 @@
 				27B576231C683F950063E77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
