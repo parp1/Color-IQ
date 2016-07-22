@@ -1,0 +1,6 @@
+framework module Pods_Color_IQ {
+  umbrella header "Pods-Color IQ-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,9 +9,7 @@
 import UIKit
 import Spring
 
-class GameViewController: UIViewController, UIGestureRecognizerDelegate {
-
-    var tapRecognizer: UITapGestureRecognizer!
+class GameViewController: UIViewController {
     
     //setting outlets, constants and variables
     @IBOutlet weak var gameMode: SpringLabel!
@@ -22,6 +20,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     var score = 0
     var timeLeft = 10
     var degreesToDecrease = 0
+    var gameOn = false
     @IBOutlet weak var button1: SpringButton!
     @IBOutlet weak var button2: SpringButton!
     @IBOutlet weak var timeLabel: SpringLabel!
@@ -67,17 +66,28 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         //if the current game is the same as the game mode expressed by the button that is pressed, the score is increased by 1; this is also true if the text and font color are the same - a "double case"
         if (game == gameMode || doubleCase)
         {
+            if (!gameOn)
+            {
+                gameOn = true
+                startGame()
+            }
             print("right")
             score += 1
-            fiveSecondTimer.invalidate()
+            if (fiveSecondTimer != nil)
+            {
+                fiveSecondTimer.invalidate()
+            }
             update()
-            fiveSecondTimer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(GameViewController.timeUp), userInfo: nil, repeats: true)
+            fiveSecondTimer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: #selector(GameViewController.timeUp), userInfo: nil, repeats: true)
         }
             
         else
         {
-            print("wrong")
-            score -= 1
+            if (gameOn)
+            {
+                print("wrong")
+                score -= 1
+            }
             self.gameMode.animation = Spring.AnimationPreset.Shake.rawValue
             self.gameMode.animate()
         }
@@ -87,10 +97,12 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     {
         super.viewDidLoad()
         
+        wordLabel.hidden = false
+        gameMode.hidden = false
+        button1.hidden = false
+        button2.hidden = false
+        gameOn = false
         update()
-        tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameViewController.startGame))
-        tapRecognizer.delegate = self
-        self.view.addGestureRecognizer(tapRecognizer)
         
         button1.userInteractionEnabled = true;
         button2.userInteractionEnabled = true;
@@ -122,6 +134,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         circularTimeBar.progressThickness = 0.2
         circularTimeBar.glowMode = KDCircularProgressGlowMode.NoGlow
         circularTimeBar.setColors(UIColor.lightGrayColor())
+        //make circular time bar appear in beginning of game
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
@@ -132,9 +145,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func startGame()
     {
-        tapRecognizer.enabled = false
         countdown()
-        fiveSecondTimer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(GameViewController.update), userInfo: nil, repeats: true)
         
         overallGameTimer = NSTimer.scheduledTimerWithTimeInterval(Double(timeLeft + 1), target: self, selector: #selector(GameViewController.gameOver), userInfo: nil, repeats: false)
         
@@ -159,11 +170,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         
         //add completion handler below to make wordLabel shake
         wordLabel.animation = Spring.AnimationPreset.Shake.rawValue
-        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: {
-            self.wordLabel.animate()
-            }, completion: {(finished:Bool) in
-                self.update()
-        })
+        wordLabel.duration = 1.0
+        wordLabel.animateToNext {
+            self.update()
+        }
     }
     
     func update()
@@ -267,7 +277,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func dismissGameplayScreen()
     {
-        wordLabel.animation = Spring.AnimationPreset.FadeOut.rawValue
+        wordLabel.animation = Spring.AnimationPreset.Fall.rawValue
         wordLabel.duration = 1.0
         gameMode.animation = Spring.AnimationPreset.Fall.rawValue
         gameMode.duration = 1.0
@@ -275,11 +285,19 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         button1.duration = 1.0
         button2.animation = Spring.AnimationPreset.Fall.rawValue
         button2.duration = 1.0
-        
         wordLabel.animate()
         gameMode.animate()
         button1.animate()
-        button2.animate()
+        button2.animateToNext
+            {
+            self.gameOverOverlay.animation = Spring.AnimationPreset.FadeInUp.rawValue
+            self.gameOverOverlay.hidden = false;
+            self.gameOverOverlay.animate()
+            self.wordLabel.hidden = true
+            self.gameMode.hidden = true
+            self.button1.hidden = true
+            self.button2.hidden = true
+        }
     }
     
     func gameOver()
@@ -289,14 +307,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
             print("game over completed")
         })
         */
+        gameOn = false
         button1.userInteractionEnabled = false;
         button2.userInteractionEnabled = false;
-        gameOverOverlay.hidden = false;
-        gameOverOverlay.animation = Spring.AnimationPreset.FadeInUp.rawValue
-        gameOverOverlay.duration = 1.0
-        gameOverOverlay.delay = 1.0
         dismissGameplayScreen()
-        gameOverOverlay.animate()
         overallGameTimer.invalidate()
         fiveSecondTimer.invalidate()
         countdownTimer.invalidate()

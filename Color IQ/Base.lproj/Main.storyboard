@@ -19,10 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-hN-ET9">
-                                <rect key="frame" x="148" y="473" width="78" height="30"/>
-                                <state key="normal" title="Start Game"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbn-F2-Nay">
                                 <rect key="frame" x="148" y="473" width="78" height="30"/>
                                 <state key="normal" title="Start Game"/>
@@ -30,10 +26,45 @@
                                     <segue destination="kI6-fd-Azp" kind="show" id="ZA0-5W-6rB"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1I6-IK-odJ" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="67" y="530" width="240" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ce-F0-vcc" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="67" y="581" width="240" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ue8-If-3cF" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="56" y="60" width="263" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yov-ea-Kej" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="67" y="270" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="rds-Ki-Ldi"/>
+                                    <constraint firstAttribute="height" constant="128" id="tPh-rd-KiO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yov-ea-Kej" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Zh-cr-SYy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ue8-If-3cF" secondAttribute="trailing" constant="40" id="COH-cB-J1w"/>
+                            <constraint firstItem="Yov-ea-Kej" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WSh-lH-HuW"/>
+                            <constraint firstItem="Yov-ea-Kej" firstAttribute="top" secondItem="Ue8-If-3cF" secondAttribute="bottom" constant="40" id="XLM-C4-wrZ"/>
+                            <constraint firstItem="Ue8-If-3cF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yha-Cy-azJ"/>
+                            <constraint firstItem="Ue8-If-3cF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="bFr-uY-lw4"/>
+                            <constraint firstItem="Ue8-If-3cF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="pTp-FI-FiN"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="colorImageView" destination="Ue8-If-3cF" id="e1K-9X-qa6"/>
+                        <outlet property="currentRankLabel" destination="0ce-F0-vcc" id="LDx-4d-yLW"/>
+                        <outlet property="currentRankPromptLabel" destination="1I6-IK-odJ" id="BCr-RS-x0n"/>
+                        <outlet property="iqImageView" destination="Yov-ea-Kej" id="SNd-C6-lYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,13 +136,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTi-E1-nzI">
                                         <rect key="frame" x="96" y="22" width="45" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFQ-kw-zM8">
                                         <rect key="frame" x="76" y="79" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
