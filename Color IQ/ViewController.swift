@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         currentRankPromptLabel.duration = 1.0
         currentRankLabel.animation = Spring.AnimationPreset.FadeInRight.rawValue
         currentRankLabel.duration = 1.0
+        currentRankLabel.text = Utilities.getCurrentRank()
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -14,19 +14,13 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>iRate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>30FAD72D342D562E760E02E36099F2DF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B5D3534FD24C89F6C781157F477190D7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

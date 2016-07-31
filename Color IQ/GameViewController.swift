@@ -26,6 +26,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timeLabel: SpringLabel!
     @IBOutlet weak var circularTimeBar: KDCircularProgress!
     @IBOutlet weak var gameOverOverlay: SpringView!
+    @IBOutlet weak var overlayScoreLabel: UILabel!
+    @IBOutlet weak var overlayHighScoreLabel: UILabel!
+    @IBOutlet weak var overlayRankLabel: UILabel!
     
     //setting color constants
     let colorNames:[String] = ["Red", "Yellow", "Green", "Blue", "Purple"]
@@ -48,7 +51,7 @@ class GameViewController: UIViewController {
     @IBAction func button1Pressed(sender: AnyObject)
     {
         print("button1pressed")
-        setOptions(button1)
+        button1.animation = Spring.AnimationPreset.ZoomIn.rawValue
         button1.animate()
         colorButtonLeft ? changeScore("color") : changeScore("text")
     }
@@ -56,7 +59,7 @@ class GameViewController: UIViewController {
     @IBAction func button2Pressed(sender: AnyObject)
     {
         print("button2 pressed")
-        setOptions(button2)
+        button2.animation = Spring.AnimationPreset.ZoomIn.rawValue
         button2.animate()
         colorButtonLeft ? changeScore("text") : changeScore("color")
     }
@@ -258,6 +261,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    //TODO: this method *might* be useless, ask Parth
     func setOptions(element: Springable)
     {
         element.force = 1.0
@@ -302,14 +306,14 @@ class GameViewController: UIViewController {
     
     func gameOver()
     {
-        /*
-        circularTimeBar.animateFromAngle(circularTimeBar.angle, toAngle: circularTimeBar.startAngle, duration: 1.0, completion: {finished in
-            print("game over completed")
-        })
-        */
         gameOn = false
         button1.userInteractionEnabled = false;
         button2.userInteractionEnabled = false;
+        overlayScoreLabel.text = String(score)
+        let highScore = Utilities.updateHighScore(score)
+        overlayHighScoreLabel.text = String(highScore)
+        overlayRankLabel.text = Utilities.getRankString(score)
+        Utilities.updateRank(score)
         dismissGameplayScreen()
         overallGameTimer.invalidate()
         fiveSecondTimer.invalidate()

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '90AC4A488D006BC5CC08EDCB'
+               BlueprintIdentifier = '9B928208F59AC9F00955E922'
                BlueprintName = 'Pods-Color IQ'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Color_IQ.framework'>

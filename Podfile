@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Color IQ' do
 	pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+    pod 'iRate'
 end
 
 target 'Color IQTests' do

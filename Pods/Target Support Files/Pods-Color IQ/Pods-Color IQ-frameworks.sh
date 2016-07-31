@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Color IQ/Spring.framework"
+  install_framework "Pods-Color IQ/iRate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Color IQ/Spring.framework"
+  install_framework "Pods-Color IQ/iRate.framework"
 fi

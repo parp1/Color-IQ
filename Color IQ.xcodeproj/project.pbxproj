@@ -17,6 +17,8 @@
 		27B5760C1C683F950063E77B /* Color_IQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5760B1C683F950063E77B /* Color_IQTests.swift */; };
 		27B576171C683F950063E77B /* Color_IQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B576161C683F950063E77B /* Color_IQUITests.swift */; };
 		27B576251C6840080063E77B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B576241C6840080063E77B /* GameViewController.swift */; };
+		27E927561D4E9E690003D40F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E927551D4E9E690003D40F /* GameKit.framework */; };
+		27F2FBE21D4DA689002A0032 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2FBE11D4DA689002A0032 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		27B576161C683F950063E77B /* Color_IQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_IQUITests.swift; sourceTree = "<group>"; };
 		27B576181C683F950063E77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B576241C6840080063E77B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		27E927551D4E9E690003D40F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		27F2FBE11D4DA689002A0032 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.release.xcconfig"; sourceTree = "<group>"; };
 		E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_IQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				198E2E96B3D79A05FB0E096C /* Pods_Color_IQ.framework in Frameworks */,
+				27E927561D4E9E690003D40F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,7 @@
 				27B575F61C683F950063E77B /* AppDelegate.swift */,
 				27B575F81C683F950063E77B /* ViewController.swift */,
 				27A686EB1D36EB6B009FC69C /* KDCircularProgress.swift */,
+				27F2FBE11D4DA689002A0032 /* Utilities.swift */,
 				27B575FA1C683F950063E77B /* Main.storyboard */,
 				27B576241C6840080063E77B /* GameViewController.swift */,
 				27B575FD1C683F950063E77B /* Assets.xcassets */,
@@ -141,6 +147,7 @@
 		2FEAFFDF768F3ABAF20C17C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27E927551D4E9E690003D40F /* GameKit.framework */,
 				E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */,
 			);
 			name = Frameworks;
@@ -220,13 +227,18 @@
 		27B575EB1C683F950063E77B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "App Gurus";
 				TargetAttributes = {
 					27B575F21C683F950063E77B = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = U9M98M4D45;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					27B576061C683F950063E77B = {
 						CreatedOnToolsVersion = 7.2;
@@ -341,6 +353,7 @@
 				27A686EC1D36EB6B009FC69C /* KDCircularProgress.swift in Sources */,
 				27B575F91C683F950063E77B /* ViewController.swift in Sources */,
 				27B576251C6840080063E77B /* GameViewController.swift in Sources */,
+				27F2FBE21D4DA689002A0032 /* Utilities.swift in Sources */,
 				27B575F71C683F950063E77B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +495,7 @@
 			baseConfigurationReference = 131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Color IQ/Info.plist";
@@ -489,6 +503,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appgurus.Color-IQ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Color IQ/Color IQ-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -497,6 +513,7 @@
 			baseConfigurationReference = 70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Color IQ/Info.plist";
@@ -504,6 +521,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appgurus.Color-IQ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Color IQ/Color IQ-Bridging-Header.h";
 			};
 			name = Release;
 		};
