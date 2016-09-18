@@ -8,6 +8,7 @@
 
 import UIKit
 import Spring
+import Material
 
 class GameViewController: UIViewController {
     
@@ -317,8 +318,14 @@ class GameViewController: UIViewController {
         }
         
         let gameOverOverlay = NSBundle.mainBundle().loadNibNamed("GameOverOverlay", owner: nil, options: nil)[0] as! SpringView
-        gameOverOverlay.frame = CGRectMake(0, 0, 240, 240)
-        self.view.addSubview(gameOverOverlay)
+        
+        
+        //gameOverOverlay.frame = CGRectMake(0, 0, 240, 240)
+        gameOverOverlay.frame = CGRectZero
+        view.layout(gameOverOverlay).centerHorizontally().centerVertically().width(240).height(240)
+        
+
+        //self.view.addSubview(gameOverOverlay)
         
         let overlayScoreLabel = gameOverOverlay.viewWithTag(1) as! UILabel
         overlayScoreLabel.text = String(score)
@@ -327,6 +334,8 @@ class GameViewController: UIViewController {
         overlayHighScoreLabel.text = String(highScore)
         let overlayRankLabel = gameOverOverlay.viewWithTag(3) as! UILabel
         overlayRankLabel.text = Utilities.getRankString(score)
+        
+        
         
         Utilities.updateRank(score)
         dismissGameplayScreen(gameOverOverlay)

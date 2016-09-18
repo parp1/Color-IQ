@@ -1,9 +1,11 @@
 PODS:
   - iRate (1.11.4)
+  - Material (1.42.9)
   - Spring (1.0.3)
 
 DEPENDENCIES:
   - iRate
+  - Material
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
 
 EXTERNAL SOURCES:
@@ -18,6 +20,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
+  Material: a84ed893b7785f0d3c8d568e88c055f82b436473
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 9582719e99600dc561ab1d933e62ee32da0aa41f
+
+COCOAPODS: 1.0.1

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		198E2E96B3D79A05FB0E096C /* Pods_Color_IQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */; };
+		1338D7FA0817176D4949CE10 /* Pods_Color_IQTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9636DED6CCB66B977D9E9FA9 /* Pods_Color_IQTests.framework */; };
+		146E59C3F65C2902506B637B /* Pods_Color_IQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E897B767855883222C3042D /* Pods_Color_IQ.framework */; };
 		27A686EC1D36EB6B009FC69C /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A686EB1D36EB6B009FC69C /* KDCircularProgress.swift */; };
 		27B575F71C683F950063E77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B575F61C683F950063E77B /* AppDelegate.swift */; };
 		27B575F91C683F950063E77B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B575F81C683F950063E77B /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		27BFD6031D8F287A00047494 /* GameOverOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD6021D8F287A00047494 /* GameOverOverlay.xib */; };
 		27E927561D4E9E690003D40F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E927551D4E9E690003D40F /* GameKit.framework */; };
 		27F2FBE21D4DA689002A0032 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2FBE11D4DA689002A0032 /* Utilities.swift */; };
+		B647FCE5463E9407DFE1551B /* Pods_Color_IQUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AB2617EE14EEA884DB9CA7 /* Pods_Color_IQUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.debug.xcconfig"; sourceTree = "<group>"; };
+		1DC27CDB6CAF7403796C32A2 /* Pods-Color IQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.release.xcconfig"; sourceTree = "<group>"; };
+		2432CA7D581010555E1644BC /* Pods-Color IQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.debug.xcconfig"; sourceTree = "<group>"; };
 		27A686EB1D36EB6B009FC69C /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		27B575F31C683F950063E77B /* Color IQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color IQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B575F61C683F950063E77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +62,13 @@
 		27BFD6021D8F287A00047494 /* GameOverOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameOverOverlay.xib; sourceTree = "<group>"; };
 		27E927551D4E9E690003D40F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		27F2FBE11D4DA689002A0032 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ.release.xcconfig"; sourceTree = "<group>"; };
-		E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_IQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		305AD9195F9CCB37AE6F6371 /* Pods-Color IQUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQUITests/Pods-Color IQUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32EBC9E9BB3575C8178609E9 /* Pods-Color IQUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQUITests/Pods-Color IQUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B9D7F08AD5054F680C9B5D5 /* Pods-Color IQTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQTests/Pods-Color IQTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9636DED6CCB66B977D9E9FA9 /* Pods_Color_IQTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_IQTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E897B767855883222C3042D /* Pods_Color_IQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_IQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B68FEE8F0C4D204B67F22C /* Pods-Color IQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color IQTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Color IQTests/Pods-Color IQTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3AB2617EE14EEA884DB9CA7 /* Pods_Color_IQUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_IQUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				198E2E96B3D79A05FB0E096C /* Pods_Color_IQ.framework in Frameworks */,
 				27E927561D4E9E690003D40F /* GameKit.framework in Frameworks */,
+				146E59C3F65C2902506B637B /* Pods_Color_IQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1338D7FA0817176D4949CE10 /* Pods_Color_IQTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B647FCE5463E9407DFE1551B /* Pods_Color_IQUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +107,8 @@
 				27B5760A1C683F950063E77B /* Color IQTests */,
 				27B576151C683F950063E77B /* Color IQUITests */,
 				27B575F41C683F950063E77B /* Products */,
-				8ADBCA4D8F91400F18DDE722 /* Pods */,
 				2FEAFFDF768F3ABAF20C17C7 /* Frameworks */,
+				EA9069482693BED37F6A94ED /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,16 +161,22 @@
 			isa = PBXGroup;
 			children = (
 				27E927551D4E9E690003D40F /* GameKit.framework */,
-				E52A9789A4300A6CF25AD837 /* Pods_Color_IQ.framework */,
+				9E897B767855883222C3042D /* Pods_Color_IQ.framework */,
+				9636DED6CCB66B977D9E9FA9 /* Pods_Color_IQTests.framework */,
+				C3AB2617EE14EEA884DB9CA7 /* Pods_Color_IQUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8ADBCA4D8F91400F18DDE722 /* Pods */ = {
+		EA9069482693BED37F6A94ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */,
-				70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */,
+				2432CA7D581010555E1644BC /* Pods-Color IQ.debug.xcconfig */,
+				1DC27CDB6CAF7403796C32A2 /* Pods-Color IQ.release.xcconfig */,
+				7B9D7F08AD5054F680C9B5D5 /* Pods-Color IQTests.debug.xcconfig */,
+				A4B68FEE8F0C4D204B67F22C /* Pods-Color IQTests.release.xcconfig */,
+				32EBC9E9BB3575C8178609E9 /* Pods-Color IQUITests.debug.xcconfig */,
+				305AD9195F9CCB37AE6F6371 /* Pods-Color IQUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -172,12 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B5761B1C683F950063E77B /* Build configuration list for PBXNativeTarget "Color IQ" */;
 			buildPhases = (
-				5A8753099928137DD95A5389 /* Check Pods Manifest.lock */,
+				82950FCAB77D1FA068E77A1B /* [CP] Check Pods Manifest.lock */,
 				27B575EF1C683F950063E77B /* Sources */,
 				27B575F01C683F950063E77B /* Frameworks */,
 				27B575F11C683F950063E77B /* Resources */,
-				B06A65BB22DA904C8D862481 /* Embed Pods Frameworks */,
-				CA1F97258A0FDD0492DC09DE /* Copy Pods Resources */,
+				5E55D43F673BF2DBFB26C794 /* [CP] Embed Pods Frameworks */,
+				AFC2BA8B0C3144FC3E5CF0E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B5761E1C683F950063E77B /* Build configuration list for PBXNativeTarget "Color IQTests" */;
 			buildPhases = (
+				D5E15D2B3C1E517DC9B00FA2 /* [CP] Check Pods Manifest.lock */,
 				27B576031C683F950063E77B /* Sources */,
 				27B576041C683F950063E77B /* Frameworks */,
 				27B576051C683F950063E77B /* Resources */,
+				EE5673E6EF4700653805B0B2 /* [CP] Embed Pods Frameworks */,
+				93E069F5841CA17E7568BB7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B576211C683F950063E77B /* Build configuration list for PBXNativeTarget "Color IQUITests" */;
 			buildPhases = (
+				FF0A92C10A0B4958E9631161 /* [CP] Check Pods Manifest.lock */,
 				27B5760E1C683F950063E77B /* Sources */,
 				27B5760F1C683F950063E77B /* Frameworks */,
 				27B576101C683F950063E77B /* Resources */,
+				FF4EAAB19C547910661D7084 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,29 +323,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A8753099928137DD95A5389 /* Check Pods Manifest.lock */ = {
+		5E55D43F673BF2DBFB26C794 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B06A65BB22DA904C8D862481 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,19 +338,109 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA1F97258A0FDD0492DC09DE /* Copy Pods Resources */ = {
+		82950FCAB77D1FA068E77A1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93E069F5841CA17E7568BB7A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQTests/Pods-Color IQTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC2BA8B0C3144FC3E5CF0E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQ/Pods-Color IQ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5E15D2B3C1E517DC9B00FA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5673E6EF4700653805B0B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQTests/Pods-Color IQTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF0A92C10A0B4958E9631161 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4EAAB19C547910661D7084 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Color IQUITests/Pods-Color IQUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,7 +592,7 @@
 		};
 		27B5761C1C683F950063E77B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 131D9383F22E9B920777B39A /* Pods-Color IQ.debug.xcconfig */;
+			baseConfigurationReference = 2432CA7D581010555E1644BC /* Pods-Color IQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -514,7 +610,7 @@
 		};
 		27B5761D1C683F950063E77B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70B8776BFBAD6868B66432C0 /* Pods-Color IQ.release.xcconfig */;
+			baseConfigurationReference = 1DC27CDB6CAF7403796C32A2 /* Pods-Color IQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -531,6 +627,7 @@
 		};
 		27B5761F1C683F950063E77B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9D7F08AD5054F680C9B5D5 /* Pods-Color IQTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Color IQTests/Info.plist";
@@ -543,6 +640,7 @@
 		};
 		27B576201C683F950063E77B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B68FEE8F0C4D204B67F22C /* Pods-Color IQTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Color IQTests/Info.plist";
@@ -555,6 +653,7 @@
 		};
 		27B576221C683F950063E77B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32EBC9E9BB3575C8178609E9 /* Pods-Color IQUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Color IQUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -567,6 +666,7 @@
 		};
 		27B576231C683F950063E77B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 305AD9195F9CCB37AE6F6371 /* Pods-Color IQUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Color IQUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
