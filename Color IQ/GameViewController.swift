@@ -25,10 +25,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var button2: SpringButton!
     @IBOutlet weak var timeLabel: SpringLabel!
     @IBOutlet weak var circularTimeBar: KDCircularProgress!
+    
+    /*
     @IBOutlet weak var gameOverOverlay: SpringView!
     @IBOutlet weak var overlayScoreLabel: UILabel!
     @IBOutlet weak var overlayHighScoreLabel: UILabel!
     @IBOutlet weak var overlayRankLabel: UILabel!
+    */
     
     //setting color constants
     let colorNames:[String] = ["Red", "Yellow", "Green", "Blue", "Purple"]
@@ -109,8 +112,6 @@ class GameViewController: UIViewController {
         
         button1.userInteractionEnabled = true;
         button2.userInteractionEnabled = true;
-        gameOverOverlay.layer.cornerRadius = 20
-        gameOverOverlay.hidden = true;
         
         degreesToDecrease = 360 / timeLeft
         //degreesToDecrease += degreesToDecrease / (timeLeft - 1) //hacky way to make full circle complete
@@ -279,7 +280,7 @@ class GameViewController: UIViewController {
         element.animation = Spring.AnimationPreset.ZoomIn.rawValue
     }
     
-    func dismissGameplayScreen()
+    func dismissGameplayScreen(gameOverOverlay: SpringView)
     {
         wordLabel.animation = Spring.AnimationPreset.Fall.rawValue
         wordLabel.duration = 1.0
@@ -294,9 +295,9 @@ class GameViewController: UIViewController {
         button1.animate()
         button2.animateToNext
             {
-            self.gameOverOverlay.animation = Spring.AnimationPreset.FadeInUp.rawValue
-            self.gameOverOverlay.hidden = false;
-            self.gameOverOverlay.animate()
+            gameOverOverlay.animation = Spring.AnimationPreset.FadeInUp.rawValue
+            gameOverOverlay.hidden = false;
+            gameOverOverlay.animate()
             self.wordLabel.hidden = true
             self.gameMode.hidden = true
             self.button1.hidden = true
@@ -309,12 +310,26 @@ class GameViewController: UIViewController {
         gameOn = false
         button1.userInteractionEnabled = false;
         button2.userInteractionEnabled = false;
+        
+        if (score < 0)
+        {
+            score = 0
+        }
+        
+        let gameOverOverlay = NSBundle.mainBundle().loadNibNamed("GameOverOverlay", owner: nil, options: nil)[0] as! SpringView
+        gameOverOverlay.frame = CGRectMake(0, 0, 240, 240)
+        self.view.addSubview(gameOverOverlay)
+        
+        let overlayScoreLabel = gameOverOverlay.viewWithTag(1) as! UILabel
         overlayScoreLabel.text = String(score)
         let highScore = Utilities.updateHighScore(score)
+        let overlayHighScoreLabel = gameOverOverlay.viewWithTag(2) as! UILabel
         overlayHighScoreLabel.text = String(highScore)
+        let overlayRankLabel = gameOverOverlay.viewWithTag(3) as! UILabel
         overlayRankLabel.text = Utilities.getRankString(score)
+        
         Utilities.updateRank(score)
-        dismissGameplayScreen()
+        dismissGameplayScreen(gameOverOverlay)
         overallGameTimer.invalidate()
         fiveSecondTimer.invalidate()
         countdownTimer.invalidate()

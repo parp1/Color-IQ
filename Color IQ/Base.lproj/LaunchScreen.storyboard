@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,12 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-8F-gvg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coloriqcover" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-8F-gvg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© App Gurus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5U-BF-KeD">
+                                <rect key="frame" x="136" y="642" width="103" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="glD-QN-Oc0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vx7-8F-gvg" secondAttribute="trailing" id="021-h3-s7L"/>
+                            <constraint firstAttribute="trailing" secondItem="E5U-BF-KeD" secondAttribute="trailing" constant="136" id="PNf-B7-pGB"/>
+                            <constraint firstItem="Vx7-8F-gvg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="RwI-sr-apR"/>
+                            <constraint firstAttribute="bottom" secondItem="Vx7-8F-gvg" secondAttribute="bottom" id="cEA-fj-yfV"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="E5U-BF-KeD" secondAttribute="bottom" constant="5" id="iet-f3-WmL"/>
+                            <constraint firstItem="E5U-BF-KeD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="136" id="lYk-GS-EHF"/>
+                            <constraint firstItem="Vx7-8F-gvg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wmP-65-7x2"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -32,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iTunesArtwork" width="512" height="512"/>
+        <image name="coloriqcover" width="1024" height="1024"/>
     </resources>
 </document>

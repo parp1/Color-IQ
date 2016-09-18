@@ -11,38 +11,41 @@ import Spring
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var colorImageView: SpringImageView!
-    
-    @IBOutlet weak var iqImageView: SpringImageView!
+    @IBOutlet weak var colorIQImageView: SpringImageView!
     
     @IBOutlet weak var currentRankPromptLabel: SpringLabel!
     
     @IBOutlet weak var currentRankLabel: SpringLabel!
     
+    @IBOutlet weak var tapToPlayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        iqImageView.hidden = true
+        colorIQImageView.hidden = true
         currentRankPromptLabel.hidden = true
         currentRankLabel.hidden = true
+        tapToPlayLabel.hidden = true
+        tapToPlayLabel.font = UIFont(name: "Avenir-Next", size: 12)
+        tapToPlayLabel.textAlignment = .Center
         
-        colorImageView.image = UIImage(named: "colorpng")!
-        colorImageView.contentMode = .ScaleAspectFit
-        iqImageView.image = UIImage(named: "iqpng")!
-        iqImageView.contentMode = .ScaleAspectFit
+        colorIQImageView.image = UIImage(named: "coloriqlogowhite")!
+        colorIQImageView.contentMode = .ScaleAspectFit
         currentRankPromptLabel.font = UIFont(name: "Avenir-Next", size: 12)
-        currentRankPromptLabel.text = "Current Rank:"
-        currentRankLabel.text = "[test]"
+        currentRankPromptLabel.textAlignment = .Center
+        currentRankPromptLabel.textColor = UIColor.lightGrayColor()
+        currentRankPromptLabel.text = "Current Rank"
+        currentRankLabel.font = UIFont(name: "AvenirNext-Bold", size: 36)
+        currentRankLabel.textAlignment = .Center
+        currentRankLabel.text = "test"
         
-        colorImageView.animation = Spring.AnimationPreset.FadeInLeft.rawValue
-        colorImageView.duration = 1.0
-        iqImageView.animation = Spring.AnimationPreset.FadeInRight.rawValue
-        iqImageView.duration = 1.0
+        colorIQImageView.animation = Spring.AnimationPreset.SlideDown.rawValue
+        colorIQImageView.duration = 1.0
         
-        currentRankPromptLabel.animation = Spring.AnimationPreset.FadeInLeft.rawValue
+        currentRankPromptLabel.animation = Spring.AnimationPreset.SlideUp.rawValue
         currentRankPromptLabel.duration = 1.0
-        currentRankLabel.animation = Spring.AnimationPreset.FadeInRight.rawValue
+        currentRankLabel.animation = Spring.AnimationPreset.SlideUp.rawValue
         currentRankLabel.duration = 1.0
         currentRankLabel.text = Utilities.getCurrentRank()
     }
@@ -50,16 +53,28 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        colorImageView.animateNext {
-            self.iqImageView.hidden = false
-            self.iqImageView.animateNext {
-                self.currentRankPromptLabel.hidden = false
-                self.currentRankPromptLabel.animateNext {
-                    self.currentRankLabel.hidden = false
-                    self.currentRankLabel.animate()
+        colorIQImageView.hidden = false
+        colorIQImageView.animateNext {
+            self.currentRankPromptLabel.hidden = false
+            self.currentRankPromptLabel.animateNext {
+                self.currentRankLabel.hidden = false
+                self.currentRankLabel.animateNext {
+                    let timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.toggleVisible), userInfo: nil, repeats: true)
+                    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.startGame))
+                    self.view.addGestureRecognizer(tapGestureRecognizer)
                 }
             }
         }
+    }
+    
+    func toggleVisible() {
+        tapToPlayLabel.hidden = !tapToPlayLabel.hidden
+    }
+    
+    func startGame() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gvc = storyboard.instantiateViewControllerWithIdentifier("GameViewController")
+        self.presentViewController(gvc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

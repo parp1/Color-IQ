@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GameCenterManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
