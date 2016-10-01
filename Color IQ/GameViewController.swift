@@ -342,7 +342,18 @@ class GameViewController: UIViewController {
         overallGameTimer.invalidate()
         fiveSecondTimer.invalidate()
         countdownTimer.invalidate()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(restartGame))
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+
     }
+    
+    func restartGame() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gvc = storyboard.instantiateViewControllerWithIdentifier("GameViewController")
+        self.presentViewController(gvc, animated: true, completion: nil)
+    }
+   
 
     override func didReceiveMemoryWarning()
     {
