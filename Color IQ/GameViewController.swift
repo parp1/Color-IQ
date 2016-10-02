@@ -322,6 +322,7 @@ class GameViewController: UIViewController {
         
         //gameOverOverlay.frame = CGRectMake(0, 0, 240, 240)
         gameOverOverlay.frame = CGRectZero
+        gameOverOverlay.hidden = true
         view.layout(gameOverOverlay).centerHorizontally().centerVertically().width(240).height(240)
         
 

@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27B576061C683F950063E77B"
-               BuildableName = "Color IQTests.xctest"
-               BlueprintName = "Color IQTests"
-               ReferencedContainer = "container:Color IQ.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27B576111C683F950063E77B"
-               BuildableName = "Color IQUITests.xctest"
-               BlueprintName = "Color IQUITests"
-               ReferencedContainer = "container:Color IQ.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
